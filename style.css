@@ -1,0 +1,93 @@
+:root {
+    --bg-dark: #0f172a;
+    --glass: rgba(255, 255, 255, 0.05);
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-dark);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.main-gradient {
+    background: radial-gradient(circle at top right, #1e293b, #0f172a);
+    min-height: 100vh;
+}
+
+/* Efecto de Cristal (Glassmorphism) */
+.glass-card {
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    width: 100%;
+    max-width: 700px;
+}
+
+/* Visualizador de Color */
+.color-display {
+    height: 180px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.badge-hex {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Inputs y Controles */
+.form-control-color-custom {
+    width: 100%;
+    height: 60px;
+    padding: 5px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.hex-field {
+    background: var(--glass) !important;
+    border: 1px solid var(--border) !important;
+    color: white !important;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.2rem;
+    padding: 12px;
+}
+
+.border-white-10 { border-color: var(--border) !important; }
+
+/* Deslizadores Personalizados */
+.custom-range {
+    width: 100%;
+    background: rgba(255,255,255,0.1);
+    height: 6px;
+    border-radius: 5px;
+}
+
+.custom-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border: 2px solid white;
+}
+
+.red::-webkit-slider-thumb { background: #ff4d4d; }
+.green::-webkit-slider-thumb { background: #2ecc71; }
+.blue::-webkit-slider-thumb { background: #3498db; }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Studio Pro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-gradient">
+        <div class="container d-flex justify-content-center align-items-center min-vh-100">
+            <div class="glass-card shadow-lg p-4 p-md-5">
+                <header class="text-center mb-4">
+                    <h1 class="h3 fw-bold text-white mb-1">Color Studio</h1>
+                    <p class="text-white-50 small">Diseño y Armonía Cromática</p>
+                </header>
+                
+                <div id="visualizador" class="color-display shadow-lg mb-5 d-flex align-items-center justify-content-center">
+                    <div id="hex-badge" class="badge-hex">#7F7F7F</div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-5 border-end border-white-10">
+                        <div class="mb-4">
+                            <label class="form-label text-white-50 small fw-bold text-uppercase">Selector Visual</label>
+                            <input type="color" id="colorPicker" class="form-control-color-custom" value="#7F7F7F">
+                        </div>
+                        <div>
+                            <label class="form-label text-white-50 small fw-bold text-uppercase">Código HEX</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-transparent border-white-10 text-white-50">#</span>
+                                <input type="text" id="hexInput" class="form-control hex-field" value="7F7F7F" maxlength="6">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7">
+                        <label class="form-label text-white-50 small fw-bold text-uppercase mb-3">Ajuste de Canales (RGB)</label>
+                        
+                        <div class="rgb-control mb-3">
+                            <div class="d-flex justify-content-between text-white mb-1">
+                                <span class="small">Rojo</span>
+                                <span id="rVal" class="fw-bold">127</span>
+                            </div>
+                            <input type="range" class="custom-range red" id="rRange" min="0" max="255" value="127">
+                        </div>
+
+                        <div class="rgb-control mb-3">
+                            <div class="d-flex justify-content-between text-white mb-1">
+                                <span class="small">Verde</span>
+                                <span id="gVal" class="fw-bold">127</span>
+                            </div>
+                            <input type="range" class="custom-range green" id="gRange" min="0" max="255" value="127">
+                        </div>
+
+                        <div class="rgb-control">
+                            <div class="d-flex justify-content-between text-white mb-1">
+                                <span class="small">Azul</span>
+                                <span id="bVal" class="fw-bold">127</span>
+                            </div>
+                            <input type="range" class="custom-range blue" id="bRange" min="0" max="255" value="127">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
